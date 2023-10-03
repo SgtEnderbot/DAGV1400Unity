@@ -554,9 +554,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   playerSpeed: 20
-  xRange: 30
+  xRange: 28.5
   blaster: {fileID: 1352298947}
-  laser: {fileID: 5307940859812184155, guid: bd009cbe89b782a81b37384f8a6b51e1, type: 3}
+  laser: {fileID: 2488949120822973487, guid: 8521cdd10cfa8e1d08ce85636fc24f27, type: 3}
 --- !u!65 &1321390227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -669,7 +669,7 @@ Transform:
   m_GameObject: {fileID: 1352298946}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.144}
+  m_LocalPosition: {x: 0, y: 0, z: 1.468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
