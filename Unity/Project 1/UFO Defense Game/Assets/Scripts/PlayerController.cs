@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	//Movement variables
 	public float horizontalInput;
 	public float playerSpeed;
 	public float xRange;
+
+	//Laser variables
+	public Transform blaster;
+	public GameObject laser;
 	 
-	void Start()
-	{
-
-	}
-
-
 	void Update()
 	{
 	
@@ -33,5 +32,17 @@ public class PlayerController : MonoBehaviour
         	{
 		transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         	}
+        
+        //Shooting lasers, creating the laser object with correct transformations
+        	if(Input.GetKeyDown(KeyCode.Space))
+        	{
+        	Instantiate(laser, blaster.transform.position, laser.transform.rotation);
+        	}
+	}
+	
+	//Delete trigger ojects that collide with player
+	private void OnTriggerEnter(Collider, other)
+	{
+	Destroy(other.gameObject);
 	}
 }
