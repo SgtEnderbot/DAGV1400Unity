@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
 	//Laser variables
 	public Transform blaster;
 	public GameObject laser;
+	
+	//Power up variables
+	public int powerUps;
+	public GameObject powerUp;
 	 
 	void Update()
 	{
@@ -43,6 +47,16 @@ public class PlayerController : MonoBehaviour
 	//Delete trigger ojects that collide with player
 	private void OnTriggerEnter(Collider other)
 	{
-	Destroy(other.gameObject);
+		if(other.gameObject == powerUp)
+		{
+		Destroy(other.gameObject);
+		powerUps ++;
+		Debug.Log("PowerUp collision. You have " + powerUps + " power ups.");
+		}
+		else
+		{
+		Destroy(other.gameObject);
+		Debug.Log("Object collision");
+		}	
 	}
 }
