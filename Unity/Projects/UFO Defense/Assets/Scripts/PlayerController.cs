@@ -47,11 +47,11 @@ public class PlayerController : MonoBehaviour
 	//Delete trigger ojects that collide with player
 	private void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject == powerUp)
+		if(other.tag == "PowerUp")
 		{
-		Destroy(other.gameObject);
 		powerUps ++;
 		Debug.Log("PowerUp collision. You have " + powerUps + " power ups.");
+		Destroy(other.gameObject);
 		}
 		else
 		{
