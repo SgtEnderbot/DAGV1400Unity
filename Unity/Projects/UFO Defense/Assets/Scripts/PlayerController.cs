@@ -50,13 +50,8 @@ public class PlayerController : MonoBehaviour
 		if(other.tag == "PowerUp")
 		{
 		powerUps ++;
-		Debug.Log("PowerUp collision. You have " + powerUps + " power ups.");
+		Debug.Log("PowerUp collision. You have " + powerUps + " power up(s).");
 		Destroy(other.gameObject);
 		}
-		else
-		{
-		Destroy(other.gameObject);
-		Debug.Log("Object collision");
-		}	
 	}
 }
