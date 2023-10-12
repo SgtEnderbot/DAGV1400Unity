@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
+    //Color variables
+    public Material color1;
+    public Material color2;
+    public GameObject Ability;
 
     //Color changing variables
-    public float colorChange = 2.0f;
-    public float colorRevert = 4.0f;
-    public float colorLimit = 6.0f;
+    public float colorChange = 0.5f;
+    public float colorRevert = 1.0f;
+    public float colorLimit = 1.5f;
     float colorTimer;
 
     void Update()
     {
-
         colorTimer += Time.deltaTime;
 
         //Changes the color of the pick up on a timer
@@ -23,9 +26,11 @@ public class ColorChanger : MonoBehaviour
         }
         else if (colorTimer >= colorRevert)
         {
-        gameObject.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
+        Ability.GetComponent<MeshRenderer>().material = color1;
         }
         else if (colorTimer >= colorChange)
-        gameObject.GetComponent<Renderer>().material.color = new Color(255, 255, 0);
+        {
+        Ability.GetComponent<MeshRenderer>().material = color2;
+        }
     }
 }

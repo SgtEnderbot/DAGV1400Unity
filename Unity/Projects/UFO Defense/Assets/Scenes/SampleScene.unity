@@ -280,7 +280,6 @@ MonoBehaviour:
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   interval: 15
-  colorInterval: 2
 --- !u!114 &591267686
 MonoBehaviour:
   m_ObjectHideFlags: 0

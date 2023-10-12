@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4298650553835622618}
   - component: {fileID: -4713341790799098435}
   - component: {fileID: -1803365237370507905}
+  - component: {fileID: -323436893628471592}
   m_Layer: 0
   m_Name: Power Up
   m_TagString: PowerUp
@@ -134,3 +135,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowBound: -30
   topBound: 20
+--- !u!114 &-323436893628471592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421562647446124313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5201c89862eef1c0b15d06b40341b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color1: {fileID: 2100000, guid: be0dc1a76f109e92e8b497691d750dcf, type: 2}
+  color2: {fileID: 2100000, guid: 13ca8c4ea11913635bc4195ddb9216d4, type: 2}
+  Ability: {fileID: 6421562647446124313}
+  colorChange: 0.5
+  colorRevert: 1
+  colorLimit: 1.5

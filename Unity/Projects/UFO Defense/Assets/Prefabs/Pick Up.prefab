@@ -147,4 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5201c89862eef1c0b15d06b40341b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorInterval: 2
+  color1: {fileID: 2100000, guid: 6bcc37d647b2d58958d25befff5b718e, type: 2}
+  color2: {fileID: 2100000, guid: e92ae2089a43f6d9db2ecfef6ba4c1b6, type: 2}
+  Ability: {fileID: 8846002651559268384}
+  colorChange: 0.5
+  colorRevert: 1
+  colorLimit: 1.5
