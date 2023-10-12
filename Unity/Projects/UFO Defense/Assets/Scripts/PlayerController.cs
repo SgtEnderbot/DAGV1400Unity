@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
 	
 	//Power up variables
 	public int powerUps;
-	public GameObject powerUp;
+
+	//Pick up variables
+	public int pickUps;
 	 
 	void Update()
 	{
@@ -51,6 +53,13 @@ public class PlayerController : MonoBehaviour
 		{
 		powerUps ++;
 		Debug.Log("PowerUp collision. You have " + powerUps + " power up(s).");
+		Destroy(other.gameObject);
+		}
+		else if(other.tag == "PickUp")
+		{
+		pickUps ++;
+		playerSpeed ++;
+		Debug.Log("PickUp collision. You have " + pickUps + " pick up(s). Your speed increased.");
 		Destroy(other.gameObject);
 		}
 	}

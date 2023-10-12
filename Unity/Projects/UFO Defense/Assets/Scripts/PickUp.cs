@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+public class PickUp : MonoBehaviour
 {
-	//Naming the object "powerUp"
-	public GameObject powerUp;
+	//Naming the object "pickUp"
+	public GameObject pickUp;
 	
 	//Variables declaring the boundaries. In scene, it seems a bit weird, but it works out.
 	public float lowBound = -30.0f;
@@ -15,13 +15,15 @@ public class PowerUp : MonoBehaviour
 	public Vector3 minPosition;
 	public Vector3 maxPosition;
 
-	//Creating a spawning timer for power ups.
-	public float interval = 10.0f;
+	//Creating a spawning timer for pick ups. A bit longer than power ups.
+	public float interval = 1.0f;
 	float timer;
+
 
 	void Update()
 	{
-	//Setting random position for spawned power up
+    
+	//Setting random position for spawned pick up
 	Vector3 randomPosition()
 	{
 	int x,y,z;
@@ -31,7 +33,6 @@ public class PowerUp : MonoBehaviour
 	return new Vector3(x,y,z);
 	}
         
-	
 	//Destroys object when out of bounds
 		if(transform.position.z > topBound)
 		{
@@ -41,12 +42,12 @@ public class PowerUp : MonoBehaviour
 		{
 		Destroy(gameObject);
 		}
-	
-	//Spawns power up on a simple timer
-	timer += Time.deltaTime;
+        
+        timer += Time.deltaTime;
+        //Spawns pick up on a simple timer
 		if (timer >= interval)
 		{
-		Instantiate(powerUp, randomPosition(), powerUp.transform.rotation);
+		Instantiate(pickUp, randomPosition(), pickUp.transform.rotation);
 		timer -= interval;
 		}
 	}
