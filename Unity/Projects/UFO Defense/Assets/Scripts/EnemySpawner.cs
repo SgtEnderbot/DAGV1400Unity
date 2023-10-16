@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
 	float spawnRangeX = 20.0f;
 	float spawnPositionZ = -20.0f;
 	float startDelay = 2.0f;
-	float lowInterval = 1.0f;
+	float lowInterval = 0.5f;
 	float highInterval = 2.0f;
 
 		void Start()

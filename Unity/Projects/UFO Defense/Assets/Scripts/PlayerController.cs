@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
 
 	//Pick up variables
 	public int pickUps;
+
+	public GameManager gameManager;
+
+	void Start()
+	{
+		//Reference GameManager script
+		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+	}
 	 
 	void Update()
 	{
@@ -40,7 +48,8 @@ public class PlayerController : MonoBehaviour
         	}
         
         //Shooting lasers, creating the laser object with correct transformations
-        	if(Input.GetKeyDown(KeyCode.Space))
+		//Checks if game is over to stop the laser from firing
+        	if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         	{
         	Instantiate(laser, blaster.transform.position, laser.transform.rotation);
         	}

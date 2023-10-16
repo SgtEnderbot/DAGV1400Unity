@@ -10,9 +10,9 @@ public class ColorChanger : MonoBehaviour
     public GameObject Ability;
 
     //Color changing variables
-    public float colorChange = 0.5f;
-    public float colorRevert = 1.0f;
-    public float colorLimit = 1.5f;
+    public float colorChange = 0.2f;
+    public float colorRevert = 0.4f;
+    public float colorLimit = 0.8f;
     float colorTimer;
 
     void Update()

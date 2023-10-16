@@ -8,9 +8,12 @@ public class DestroyOutOfBounds : MonoBehaviour
 	public float lowBound = -30.0f;
 	public float topBound = 20.0f;
 	
-	void Awake()
+	public GameManager gameManager;
+
+	void Start()
 	{
-	Time.timeScale = 1;	
+		//Reference GameManager script
+		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	void Update()
 	{
@@ -19,7 +22,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 		{
 		Destroy(gameObject);
 		Debug.Log("Game Over.");
-		Time.timeScale = 0;
+		gameManager.isGameOver = true;
 		}
 		else if (transform.position.z < lowBound)
 		{

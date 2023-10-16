@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb2617c19136f25bbcc7131a5f76178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 6
 --- !u!114 &2240747491348307301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowBound: -30
   topBound: 20
+  gameManager: {fileID: 0}
 --- !u!54 &859347543319607388
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,3 +176,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c01600f5cc212beaf1a20dbd82765c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 10
