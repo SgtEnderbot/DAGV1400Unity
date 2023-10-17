@@ -11,13 +11,11 @@ public class EnemySpawner : MonoBehaviour
 	float spawnRangeX = 20.0f;
 	float spawnPositionZ = -20.0f;
 	float startDelay = 2.0f;
-	float lowInterval = 0.5f;
-	float highInterval = 2.0f;
 
 		void Start()
 		{
 			//Spawns UFOs at a random interval between lowInterval and highInterval
-			InvokeRepeating("SpawnRandomUFO", startDelay, Random.Range(lowInterval, highInterval));
+			InvokeRepeating("SpawnRandomUFO", startDelay, 1.0f);
 		}
 
     	void Update()

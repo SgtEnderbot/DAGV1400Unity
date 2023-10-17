@@ -10,6 +10,8 @@ public class CollisionDetector : MonoBehaviour
     //Gives the signal to increase score
     public int scoreToGive;
 
+    public bool ufoDead;
+
     //Audio variables
     private AudioSource ufoAudio;
     public AudioClip boom;
@@ -19,6 +21,7 @@ public class CollisionDetector : MonoBehaviour
         //Find ScoreManager gameobject and reference ScoreManager script
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         ufoAudio = GetComponent<AudioSource>();
+        ufoDead = false;
     }
     //Detects when colliding with another object and determines if it is a laser. If so, it destroys both objects and increases the score.
 
@@ -28,8 +31,13 @@ public class CollisionDetector : MonoBehaviour
         {
             scoreManager.IncreaseScore(scoreToGive);
             ufoAudio.PlayOneShot(boom, 0.7f);
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            ufoDead = true;
+                if (ufoDead == true)
+                {
+                    Destroy(gameObject);
+                    Destroy(other.gameObject);
+                    ufoDead = false;
+                }
         }
     }
 }
