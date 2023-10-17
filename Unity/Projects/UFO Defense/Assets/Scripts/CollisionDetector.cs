@@ -21,6 +21,7 @@ public class CollisionDetector : MonoBehaviour
         ufoAudio = GetComponent<AudioSource>();
     }
     //Detects when colliding with another object and determines if it is a laser. If so, it destroys both objects and increases the score.
+
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Laser")
@@ -31,5 +32,4 @@ public class CollisionDetector : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
 }
