@@ -1,13 +1,13 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "New Float Data", menuName = "Float Data")]
 
 public class FloatData : ScriptableObject
 {
     public float value;
 
-    public void UpdateValue(float num)
+    public float Value
     {
-        value += num;
+        get {return value;}
     }
 }
