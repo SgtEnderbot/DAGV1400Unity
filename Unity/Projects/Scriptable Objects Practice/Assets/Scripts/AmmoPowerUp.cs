@@ -9,6 +9,7 @@ public class AmmoPowerUp : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             AddAmmo(other.gameObject);
+
             Destroy(gameObject);
         }
     }
@@ -20,6 +21,7 @@ public class AmmoPowerUp : MonoBehaviour
         if(weaponController != null)
         {
             weaponController.AddAmmo(ammoValue.Value);
+            Debug.Log("Ammo: " + weaponController.currentAmmo);
         }
     }
 }
