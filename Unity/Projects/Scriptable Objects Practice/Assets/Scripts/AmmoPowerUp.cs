@@ -10,11 +10,11 @@ public class AmmoPowerUp : MonoBehaviour
         {
             AddAmmo(other.gameObject);
 
-            Destroy(gameObject);
+            Destroy(gameObject, 0.2f);
         }
     }
 
-    private void AddAmmo(GameObject player)
+    public void AddAmmo(GameObject player)
     {
         WeaponController weaponController = player.GetComponent<WeaponController>();
 
