@@ -28,7 +28,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 		if(transform.position.z > topBound)
 		{
 		gameOverAudio.PlayOneShot(gameOver, 1.0f);
-		Destroy(gameObject);
+		Destroy(gameObject, 0.5f);
 		Debug.Log("Game Over.");
 		gameManager.isGameOver = true;
 		}
