@@ -10,4 +10,15 @@ public class FloatData : ScriptableObject
     {
         get {return value;}
     }
+
+    public void UpdateValue(float num)
+    {
+        value += num;
+    }
+
+    public void SetValue(float num)
+    {
+        value = num;
+    }
+
 }
