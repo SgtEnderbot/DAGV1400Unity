@@ -5,7 +5,8 @@ public class TriggerEnterEvent : MonoBehaviour
 {
     public UnityEvent triggerEnterEvent;
 
-    private void OnTriiiggerEnter(Collider other)
+    //Should allow objects to "invoke" an action upon contact
+    private void OnTriggerEnter(Collider other)
     {
         triggerEnterEvent.Invoke();
     }
