@@ -11,6 +11,7 @@ public class ParticlePlayer : MonoBehaviour
         particleSystem.Stop();
     }
 
+    //Plays the particle system when called.
     public void PlayParticles()
     {
         particleSystem.Play();

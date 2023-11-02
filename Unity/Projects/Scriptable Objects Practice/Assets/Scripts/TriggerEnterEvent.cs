@@ -12,6 +12,7 @@ public class TriggerEnterEvent : MonoBehaviour
         triggerEnterEvent.Invoke();
     }
 
+    //Should allow objects to "invoke" an action upon leaving contact
     private void OnTriggerExit(Collider other)
     {
         triggerExitEvent.Invoke();
