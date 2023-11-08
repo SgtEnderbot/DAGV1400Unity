@@ -6,18 +6,19 @@ using UnityEngine;
 public class MatchBehavior : MonoBehaviour
 {
     public ID idObj;
-    public UnityEvent matchEvent, noMatchEvent;
+    public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         //Grabs the ID of the other object, checks for null, stores the other ID
         var tempObj = other.GetComponent<IDContainerBehavior>();
         if (tempObj == null)
         {
-            return;
+            yield break;
         }
-        var otherID = tempObj.idObj;
+
         //On collision, checks the ID of both objects to determine if they match
+        var otherID = tempObj.idObj;
         if (otherID == idObj)
         {
             matchEvent.Invoke();
@@ -25,6 +26,8 @@ public class MatchBehavior : MonoBehaviour
         else
         {
             noMatchEvent.Invoke();
+            yield return new WaitForSeconds(0.5f);
+            noMatchDelayedEvent.Invoke();
         }
     }
 }
