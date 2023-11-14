@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 1850383404597676480}
   - component: {fileID: -3834205175331251921}
   - component: {fileID: 2506704564893244913}
-  - component: {fileID: -3353958756480363730}
+  - component: {fileID: 2712296998331730412}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   disableEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-3353958756480363730
+--- !u!114 &2712296998331730412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,11 +205,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662915882899604980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe0b5d5d39ea1b80bb596ee6179b702, type: 3}
+  m_Script: {fileID: 11500000, guid: ab4061bfab99ed608858cdabde30fced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 0}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  colorIDDataListObj: {fileID: 11400000, guid: 7ec7f2d05a163cc51901bc145369a681, type: 2}
