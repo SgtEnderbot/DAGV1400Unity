@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3834205175331251921}
   - component: {fileID: 2506704564893244913}
   - component: {fileID: 2712296998331730412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,3 +208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4061bfab99ed608858cdabde30fced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idObj: {fileID: 0}
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  noMatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  noMatchDelayedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  colorIDDataListObj: {fileID: 0}
