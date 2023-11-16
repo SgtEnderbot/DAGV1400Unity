@@ -11,7 +11,7 @@ public class MatchBehavior : MonoBehaviour
     private IEnumerator OnTriggerEnter(Collider other)
     {
         //Grabs the ID of the other object, checks for null, stores the other ID
-        var tempObj = other.GetComponent<IDContainerBehavior>();
+        var tempObj = other.GetComponent<ColorIDBehavior>();
         if (tempObj == null)
         {
             yield break;

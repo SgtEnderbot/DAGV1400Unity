@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -4670064284539553846}
   - component: {fileID: 1850383404597676480}
   - component: {fileID: -3834205175331251921}
-  - component: {fileID: 2506704564893244913}
   - component: {fileID: -3353958756480363730}
   m_Layer: 6
   m_Name: Circle
@@ -133,7 +132,7 @@ Rigidbody:
   m_GameObject: {fileID: 1662915882899604980}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 2
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -163,39 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3cc874fd4bf23dc94623946ebcb323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2506704564893244913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662915882899604980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae73d216e7a12071b57e297014400ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -3834205175331251921}
-        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
-        m_MethodName: ChangeRendererColor
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7ec7f2d05a163cc51901bc145369a681, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ColorIDDataList, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &-3353958756480363730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,5 +177,29 @@ MonoBehaviour:
   idObj: {fileID: 0}
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7ec7f2d05a163cc51901bc145369a681, type: 2}
+        m_TargetAssemblyTypeName: ColorIDDataList, Assembly-CSharp
+        m_MethodName: SetCurrentColorRandomly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -3834205175331251921}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7ec7f2d05a163cc51901bc145369a681, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorIDDataList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   colorIDDataListObj: {fileID: 11400000, guid: 7ec7f2d05a163cc51901bc145369a681, type: 2}
